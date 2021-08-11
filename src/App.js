@@ -34,14 +34,12 @@ function App() {
     fetchTasks();
   }, [])
 
-  const taskAddHandler = () => {
-    setTasks((prevTasks) => prevTasks.concat(tasks));
-  }
+  
 
   return (
     <React.Fragment>
 
-      <NewTask onAddtask={taskAddHandler} />
+      <NewTask  />
       <Tasks
         items={tasks}
         error={error}
