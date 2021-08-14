@@ -15,7 +15,13 @@ const Tasks = props => {
           </ul>
         );
       }
-    let content = taskList;
+  let content = taskList;
+  if (props.error) {
+    content=<button onClick={props.onFetch}>Try again</button>
+  }
+  if (props.loading) {
+    content = 'Loading task...';
+  }
     return (
         <Section>
             <div className={classes.container}>{content }</div>
