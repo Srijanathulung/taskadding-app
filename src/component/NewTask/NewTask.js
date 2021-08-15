@@ -5,7 +5,7 @@ import Section from '../UI/Section.js';
 
 const NewTask = props => {
     const [error, setError] = useState(null);
-    const[isLoading,setIsLoading]=useState(false)
+    const [isLoading, setIsLoading] = useState(false);
 
     const enterTaskHandler =async (taskText) => {
         setIsLoading(true);
